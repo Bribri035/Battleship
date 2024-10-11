@@ -2,13 +2,21 @@
 
 grid::grid(/* args */)
 {
+    // create the grid using O as the default for the grid and initialize all values
 }
 
 grid::~grid()
 {
 }
-void grid::changeValue(int xPos, int yPos, char nValue){
+char grid::CheckTarget(int xpos, int ypos){
+    //error check xpos and y pos
+    return board[ypos][xpos];
+}
 
+void grid::changeValue(int xPos, int yPos, char nValue){
+    //add error check for x pos and y pos
+    board[yPos][xPos] = nValue;
+    return;
 }
 void grid::placeShip(int shipType, bool direction, int xpos, int ypos){
     //try{ commented out until catch blocks are added
